@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Phone, Mail, MapPin, Clock, Star, Instagram, Scissors, Users, Play, Pause } from "lucide-react"
+import { Phone, Mail, MapPin, Clock, Star, Scissors, Users, Play, Pause } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import BookingCalendar from "@/components/booking-calendar"
@@ -19,6 +19,12 @@ export default function IkeBarberWebsite() {
   const handleVideoPause = () => {
     setPlayingVideo(null)
   }
+
+  const TikTokIcon = ({ className }: { className?: string }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+    </svg>
+  )
 
   return (
     <div className="min-h-screen bg-white">
@@ -68,7 +74,7 @@ export default function IkeBarberWebsite() {
         id="home"
         className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden"
       >
-        <div className="absolute inset-0 bg-[url('/images/hero-bg.jpg')] bg-cover bg-center opacity-30"></div>
+        <div className="absolute inset-0 bg-[url('/images/hero-street-bg.jpg')] bg-cover bg-center opacity-40"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 tracking-tight animate-fade-in">
@@ -137,11 +143,11 @@ export default function IkeBarberWebsite() {
               </div>
               <div className="relative">
                 <Image
-                  src="/Ike the barber.png?height=600&width=500"
-                  alt="Ike the Barber"
+                  src="/images/ike-portrait.png"
+                  alt="Ike the Barber - Professional Barber"
                   width={500}
                   height={600}
-                  className="rounded-lg shadow-2xl"
+                  className="rounded-lg shadow-2xl object-cover w-full h-auto"
                 />
                 <div className="absolute -bottom-6 -right-6 bg-gold-500 text-black p-6 rounded-lg shadow-lg">
                   <p className="font-bold text-lg">{'"Precision in every cut"'}</p>
@@ -296,6 +302,26 @@ export default function IkeBarberWebsite() {
                   title: "Professional Finish",
                   description: "The final touches that make all the difference",
                 },
+                {
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Video%202025-10-26%20at%2018.27.17_8ffabf4c-Di9fCT4r83HL43iBu698kmoH7Fw1BY.mp4",
+                  title: "Fresh Fade Transformation",
+                  description: "Watch a complete fade cut with precision line-up",
+                },
+                {
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Video%202025-10-26%20at%2018.27.18_c0f887ea-Eh0Gjlh79ulwQZ3ml46KuvAD03wokm.mp4",
+                  title: "Professional Styling",
+                  description: "Expert cutting techniques and finishing touches",
+                },
+                {
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Video%202025-10-26%20at%2018.27.21_dcd08259-8nK7CxZmeQXPEM5LBUOJgR1tXn9RMz.mp4",
+                  title: "Modern Cut Showcase",
+                  description: "Contemporary styling with attention to detail",
+                },
+                {
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Video%202025-10-26%20at%2018.27.25_8e1553b4-BdnvdIxenyj1OtjKcYZwjwOPQne9om.mp4",
+                  title: "Signature Ike Style",
+                  description: "The precision and care that defines our work",
+                },
               ].map((video, index) => (
                 <div
                   key={index}
@@ -413,6 +439,12 @@ export default function IkeBarberWebsite() {
                 { src: "/images/gallery-4.jpg", alt: "Fresh urban fade cut" },
                 { src: "/images/gallery-5.jpg", alt: "Precision fade and lineup" },
                 { src: "/images/gallery-6.jpg", alt: "Clean professional cut" },
+                { src: "/images/new-gallery-1.jpg", alt: "Fresh fade haircut on Steve Biko Street" },
+                { src: "/images/new-gallery-2.jpg", alt: "Clean fade cut with precision line-up" },
+                { src: "/images/new-gallery-3.jpg", alt: "Professional dye and cut service in barbershop" },
+                { src: "/images/new-gallery-4.jpg", alt: "Textured curly cut with perfect shape" },
+                { src: "/images/new-gallery-5.jpg", alt: "Special color dye - copper orange fade" },
+                { src: "/images/new-gallery-6.jpg", alt: "Detailed dyed hair styling and texture" },
               ].map((image, index) => (
                 <div
                   key={index}
@@ -436,9 +468,9 @@ export default function IkeBarberWebsite() {
               <Button
                 variant="outline"
                 className="border-black text-black hover:bg-black hover:text-white bg-transparent"
-                onClick={() => window.open("https://instagram.com/ikethebarber", "_blank")}
+                onClick={() => window.open("https://www.tiktok.com/@ikethebarberr", "_blank")}
               >
-                View More on Instagram
+                View More on TikTok
               </Button>
             </div>
           </div>
@@ -474,7 +506,7 @@ export default function IkeBarberWebsite() {
                   name: "David Nkomo",
                   rating: 5,
                   review:
-                    "Found Ike through Instagram and I'm so glad I did. The best fade I've ever had and great conversation too. Will definitely be back!",
+                    "Found Ike through TikTok and I'm so glad I did. The best fade I've ever had and great conversation too. Will definitely be back!",
                   service: "New Client",
                 },
               ].map((review, index) => (
@@ -501,11 +533,11 @@ export default function IkeBarberWebsite() {
             <div className="text-center mt-12">
               <p className="text-gray-400 mb-4">Follow us for more reviews and updates</p>
               <Link
-                href="https://instagram.com/ikethebarber"
+                href="https://www.tiktok.com/@ikethebarberr"
                 className="inline-flex items-center text-gold-500 hover:text-gold-400 font-semibold"
               >
-                <Instagram className="w-5 h-5 mr-2" />
-                @ikethebarber
+                <TikTokIcon className="w-5 h-5 mr-2" />
+                @ikethebarberr
               </Link>
             </div>
           </div>
@@ -603,8 +635,8 @@ export default function IkeBarberWebsite() {
                   Professional barbering services in the heart of Sunnyside, Pretoria.
                 </p>
                 <div className="flex space-x-4">
-                  <Link href="https://instagram.com/ikethebarber" className="text-gray-400 hover:text-gold-500">
-                    <Instagram className="w-6 h-6" />
+                  <Link href="https://www.tiktok.com/@ikethebarberr" className="text-gray-400 hover:text-gold-500">
+                    <TikTokIcon className="w-6 h-6" />
                   </Link>
                 </div>
               </div>
