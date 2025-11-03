@@ -178,22 +178,22 @@ export default function IkeBarberWebsite() {
                   {[
                     {
                       service: "Normal Cut",
-                      price: "R80",
+                      price: "R100",
                       description: "Traditional cuts with modern precision",
                     },
                     {
-                      service: "Normal Cut + Dye (Standard Color)",
+                      service: "Normal Cut + Black Dye",
                       price: "R160",
                       description: "Normal cut with standard color dye",
                     },
                     {
                       service: "Normal Cut + Dye (Special Color)",
-                      price: "R200",
+                      price: "R300",
                       description: "Normal cut with premium color dye",
                     },
                     {
                       service: "Kids Cut (under 12)",
-                      price: "R60",
+                      price: "R70",
                       description: "Special cuts for children under 12",
                     },
                     {
@@ -202,7 +202,7 @@ export default function IkeBarberWebsite() {
                       description: "Shape and style your facial hair",
                     },
                     {
-                      service: "Full Shave (Hot Towel)",
+                      service: "Full Shave",
                       price: "R70",
                       description: "Complete shave with hot towel treatment",
                     },
