@@ -67,12 +67,12 @@ export default function BookingCalendar({ onBookingSelect }: BookingCalendarProp
   ]
 
   const services = [
-    { name: "Normal Cut", price: "R80" },
-    { name: "Normal Cut + Dye (Standard Color)", price: "R160" },
-    { name: "Normal Cut + Dye (Special Color)", price: "R200" },
-    { name: "Kids Cut (under 12)", price: "R60" },
+    { name: "Normal Cut", price: "R100" },
+    { name: "Normal Cut + Black Dye", price: "R160" },
+    { name: "Normal Cut + Dye (Special Color)", price: "R300" },
+    { name: "Kids Cut (under 12)", price: "R70" },
     { name: "Beard Trim", price: "R40" },
-    { name: "Full Shave (Hot Towel)", price: "R70" },
+    { name: "Full Shave", price: "R70" },
     { name: "Fade Cut", price: "R100" },
     { name: "Line-up Only", price: "R50" },
   ]
